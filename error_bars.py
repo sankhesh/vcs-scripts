@@ -23,14 +23,14 @@ data = """-11.14902417  -9.17390922  -7.29515002
                                      4.55749531   6.04921304   7.20744489   7.65294958""".split()
 data = numpy.array(data, dtype=numpy.float)
 data = MV2.array(data)
+
 yx.datawc_x1 = 0
 yx.datawc_x2 = 80
 yx.datawc_y1 = -12
 yx.datawc_y2 = 12
 yx.marker = 'dot'
-yx.markersize = 3
+yx.markersize = 5
 
-
-x.plot(data, yx)
+x.plot(data, yx, error=2)
 x.interact()
 # x.png('error_bars.png')
