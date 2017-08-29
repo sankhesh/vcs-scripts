@@ -31,6 +31,12 @@ yx.datawc_y2 = 12
 yx.marker = 'dot'
 yx.markersize = 5
 
+eb = x.createerrorbars()
+eb.color = [10, 40, 60, 25]
+eb.type = "y"
+yx.errorbars = eb
+
 x.plot(data, yx, error=2)
+# x.png('x_error_bars.png')
 x.interact()
 # x.png('error_bars.png')
