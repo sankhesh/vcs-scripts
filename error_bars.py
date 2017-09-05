@@ -36,7 +36,10 @@ eb.color = [10, 40, 60, 25]
 eb.type = "y"
 yx.errorbars = eb
 
-x.plot(data, yx, error=2)
+error = numpy.random.rand(1, 64)
+error = error.tolist()[0]
+
+x.plot(data, yx, error=error)
 # x.png('x_error_bars.png')
 x.interact()
 # x.png('error_bars.png')
